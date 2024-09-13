@@ -1,4 +1,4 @@
-{ stdenv, cmake, hellolib }:
+{ stdenv, cmake }:
 
 stdenv.mkDerivation rec {
   pname = "lab2_part3_library";
