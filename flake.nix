@@ -8,7 +8,7 @@
     let
         system = "aarch64-darwin";
         overlay = final: prev: {
-            hellolib = final.callPackage ./default.nix {};
+            HelloLibrary = final.callPackage ./default.nix {};
         };
         overlays = [overlay];
         pkgs = import nixpkgs {
@@ -17,7 +17,7 @@
         };
     in
     {
-        packages.${system}.default = pkgs.hellolib;
+        packages.${system}.default = pkgs.HelloLibrary;
         overlays.default = nixpkgs.lib.composeManyExtensions overlays;
     };
 }
