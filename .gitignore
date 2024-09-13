@@ -2,3 +2,4 @@ result/
 .idea
 .DS_Store
 cmake-build-debug/
+result/
